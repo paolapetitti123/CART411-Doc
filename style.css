@@ -4,9 +4,11 @@ body {
     background-color: white;
     font-family: 'Poppins', sans-serif;
 }
+
 #c1 {
-    padding-top: 9rem;
+  float: right;
 }
+
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
@@ -133,16 +135,17 @@ h1, h2 {
 
   /* Add a card effect for articles */
   #card {
-    width: 50%;
-    height: 720px;
-    float: left;
+    position: absolute;
+    width: 50% !important;
+    display: block;
+    z-index: 9999;
     background-color: #ff71af;
-    padding-top: 5px;
+    padding-top: 1%;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
     margin-left: 1%;
-    margin-top: 2%;
+    margin-top: 8%;
     border-radius: 10px;
   }
   
@@ -156,25 +159,6 @@ h1, h2 {
   }
 
   #container {
-width: 100%;
+    position: relative;
   }
 
-  /* Clear floats after the columns */
-#container:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {
-      width: 100%;
-      padding: 0;
-    }
-  }
-
-  #can1 {
-    padding-top: 2rem;
-    height: 1080px;
-  }
