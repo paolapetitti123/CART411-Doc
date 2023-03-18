@@ -17,7 +17,7 @@
 
 </head>
 
-<body>
+<body >
     <div class="nav">
         <input type="checkbox">
         <span></span>
@@ -31,13 +31,13 @@
     </div>
 
     <div class="mylogo">
-        <img class="pao" src="./pictures/mylogo.png" alt="mylogo">
+        <img class="pao" src="./pictures/mylogo.png" alt="mylogo" onclick="play()">
     </div>
 
     <div id="container">
 
         <div id="row">
-            <div id="card">
+            <div id="card" >
                 <h1>Welcome!</h1>
                 <br>
                 <p>
@@ -57,12 +57,26 @@
         </div>
 
         <canvas id="c1"></canvas>
+        <audio src="/audio/cyberpunk.mp3" id="audio"></audio>
+
     </div>
-
-
-
-
+    <script>
+        function play() {
+            var audio = document.getElementById('audio');
+            if (audio.paused) {
+                audio.play();
+                $('#play').removeClass('glyphicon-play-circle')
+                $('#play').addClass('glyphicon-pause')
+            }else{
+                audio.pause();
+                audio.currentTime = 0
+                $('#play').addClass('glyphicon-play-circle')
+                $('#play').removeClass('glyphicon-pause')
+            }
+        }
+    </script>
     <script type="module" src="bundle.js"></script>
+    
 </body>
 
 </html>
